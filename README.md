@@ -1,24 +1,5 @@
-# README
+README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic Ruby on Rails application which is designed to act as a Wikipedia platform.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Users can sign-up, login and logout of the application and will be able to write a new article or view, edit and delete the articles available on the page.
