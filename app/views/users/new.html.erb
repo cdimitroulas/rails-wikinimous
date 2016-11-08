@@ -1,9 +1,44 @@
-<h1>Signup to Wikinimous!</h1>
-
-<%= form_for :user, url:'/users' do |f| %>
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
-<% end %>
+<div class="container">
+  <div class="form">
+    <%= form_for :user, url:'/users' do |f| %>
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <h1>Signup to Wikinimous!</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <div class="form-group">
+             Name: <%= f.text_field :name %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <div class="form-group">
+            Email: <%= f.text_field :email %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <div class="form-group">
+            Password: <%= f.password_field :password %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <div class="form-group">
+            Password Confirmation <%= f.password_field :password_confirmation %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <%= f.submit "Submit", class: "btn btn-primary btn-lg" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

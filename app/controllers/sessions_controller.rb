@@ -9,14 +9,14 @@ class SessionsController < ApplicationController
     # Checks if the user exists and if the password is correct
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
-      redirect_to '/'
+      redirect_to root_path
     else
-      redirect_to '/login'
+      redirect_to login_path
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to '/login'
+    redirect_to login_path
   end
 end
