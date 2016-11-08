@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    markup_to_html
     @article =Article.create(params_article)
     redirect_to article_path(@article)
   end
@@ -22,6 +23,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    markup_to_html
     @article.update(params_article)
     redirect_to article_path(@article)
   end
@@ -32,6 +34,10 @@ class ArticlesController < ApplicationController
   end
 
   private
+
+  def markup_to_html
+    params[:article][:content] = Kramdown::Document.new(params[:article][:content]).to_html
+  end
 
   def params_article
     params.require(:article).permit(:title, :content)
