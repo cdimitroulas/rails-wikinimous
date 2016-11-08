@@ -7,7 +7,7 @@
     <%= link_to article_path(a) do %>
       <h3><%= a.title %></h3>
     <% end %>
-    <p><%= a.content %></p>
+    <p><%= raw a.content %></p>
   </li>
   <% end %>
 </ul>

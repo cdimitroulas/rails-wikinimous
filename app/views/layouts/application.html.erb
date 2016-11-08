@@ -11,15 +11,10 @@
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
-    <div class="navbar">
-    </div>
+    <%= render "layouts/navigation" if session[:user_id] %>
     <div class="container text-justify">
       <%= yield %>
     </div>
-    <% unless action_name == "index" %>
-      <div class="container link-home">
-       <%= link_to "Return to homepage", articles_path %>
-      </div>
-    <% end %>
+    <%= render "layouts/linkhomepage" %>
   </body>
 </html>

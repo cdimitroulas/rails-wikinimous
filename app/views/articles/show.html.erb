@@ -1,8 +1,11 @@
-<h1><%= @article.title %></h1>
+<div class="container article text-justify">
+  <h1><%= @article.title %></h1>
 
-<%= raw @article.content %>
-
-<%= link_to "Edit this article", edit_article_path %>
-<%= link_to "Delete this article", article_path,
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
+  <%= raw @article.content %>
+</div>
+<div class="container" id="link-modify">
+  <%= link_to "Edit this article", edit_article_path %>
+  <%= link_to "Delete this article", article_path,
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+</div>
