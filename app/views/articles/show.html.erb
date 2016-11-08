@@ -1,6 +1,6 @@
 <h1><%= @article.title %></h1>
 
-<%= @article.content.html_safe %>
+<%= raw @article.content %>
 
 <%= link_to "Edit this article", edit_article_path %>
 <%= link_to "Delete this article", article_path,

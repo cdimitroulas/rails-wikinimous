@@ -7,10 +7,10 @@
     <%= f.label :content %>
     <%= f.text_area :content, class: "form-control", id: "content-editor"%>
   </div>
-  <%= f.submit class: "btn btn-primary" %>
+  <%= f.submit class: "btn btn-primary", id: "btn-submit" %>
 <% end %>
 
-<script>
+<!-- <script>
   var textEditor = ace.edit('content-editor');
   textEditor.setOptions({
     maxLines: 20,
@@ -19,5 +19,8 @@
     showGutter: false,
     wrap: true
   });
-</script>
+  // textEditor.getSession().on('change', function () {
+  //   textarea.val(editor.getSession().getValue());
+  // });
+</script> -->
 
